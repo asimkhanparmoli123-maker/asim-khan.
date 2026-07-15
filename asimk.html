@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature & Tech Media Showcase</title>
+    <style>
+        /* Modern Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #334155;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e3a8a, #0d9488);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #1e293b;
+            border-left: 6px solid #0d9488;
+            padding-left: 12px;
+        }
+
+        /* Image Grid Layout (5 Cards) */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-body h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .card-body p {
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        /* Video List Layout (5 Videos) */
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .video-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .video-item {
+                grid-template-columns: 1.5fr 1fr;
+            }
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            background-color: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-details {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #ccfbf1;
+            color: #0f766e;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            align-self: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .video-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .video-details p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Creative Media Hub</h1>
+        <p>A structured gallery displaying five distinct imagery topics and five cinematic video themes.</p>
+    </header>
+
+    <main>
+        
+        <!-- SECTION 1: FIVE IMAGES -->
+        <section>
+            <h2>Photo Showcase (5 Topics)</h2>
+            <div class="image-grid">
+                
+                <!-- Topic 1 -->
+                <article class="image-card">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&q=80" alt="Sunbeams in a deep green forest">
+                    <div class="card-body">
+                        <h3>Forest Ecology</h3>
+                        <p>Discovering how root networks and sunlight distribution shape forest biodiversity.</p>
+                    </div>
+                </article>
+
+                <!-- Topic 2 -->
+                <article class="image-card">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&q=80" alt="Planet Earth from deep space">
+                    <div class="card-body">
+                        <h3>Astrophysics</h3>
+                        <p>Analyzing cosmic atmospheric data and planetary dynamics beyond our solar system.</p>
+                    </div>
+                </article>
+
+                <!-- Topic 3 -->
+                <article class="image-card">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&q=80" alt="Foggy mountains at sunrise">
+                    <div class="card-body">
+                        <h3>Mountain Geology</h3>
+                        <p>Tracking the tectonic movements and erosion patterns of alpine landscapes.</p>
+                    </div>
+                </article>
+
+                <!-- Topic 4 -->
+                <article class="image-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt="High-tech circuit board details">
+                    <div class="card-body">
+                        <h3>Future Tech</h3>
+                        <p>A look into the architecture of modern processors and advanced computing chips.</p>
+                    </div>
+                </article>
+
+                <!-- Topic 5 -->
+                <article class="image-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80" alt="Gentle ocean waves on a golden beach">
+                    <div class="card-body">
+                        <h3>Marine Coastlines</h3>
+                        <p>How tidal systems, salt marshes, and currents sculpt coastal topography.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: FIVE VIDEOS -->
+        <section>
+            <h2>Cinematic Video Topics (5 Videos)</h2>
+            <div class="video-list">
+
+                <!-- Video 1 -->
+                <article class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+<video src="Video_20241113_130500.mp4"></video>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-details">
+                        <span class="badge">Nature</span>
+                        <h3>Escaping to the Mountains</h3>
+                        <p>This video focuses on alpine environments, illustrating weather shifts, altitude changes, and vertical terrains in remote wilderness zones.</p>
+                    </div>
+                </article>
+
+                <!-- Video 2 -->
+                <article class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="Snapchat-793437586.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-details">
+                        <span class="badge">Energy</span>
+                        <h3>Thermal Mechanics</h3>
+                        <p>A documentary look exploring heat generation, energy release dynamics, and the physics of combustion under laboratory conditions.</p>
+                    </div>
+                </article>
+
+                <!-- Video 3 -->
+                <article class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="Snapchat-592190858.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-details">
+                        <span class="badge">Culture</span>
+                        <h3>Active Exploration</h3>
+                        <p>Tracking the psychology of recreation, examining how outdoor activities impact physical health and mental focus.</p>
+                    </div>
+                </article>
+
+                <!-- Video 4 -->
+                <article class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+<video src="Snapchat-1542545977.mp4"></video>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-details">
+                        <span class="badge">Automotive</span>
+                        <h3>High-Velocity Engineering</h3>
+                        <p>An educational overview covering aerodynamics, mechanical drivetrains, and friction co-efficiency in high-performance racing vehicles.</p>
+                    </div>
+                </article>
+
+                <!-- Video 5 -->
+                <article class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="Snapchat-1485870494.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-details">
+                        <span class="badge">Animation</span>
+                        <h3>Digital Render Techniques</h3>
+                        <p>Analyzing rendering pipelines, lighting mechanics, and character rigging inside modern 3D software engines.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Interactive Media Gallery. Built with semantic HTML & Responsive CSS.</p>
+    </footer>
+
+</body>
+</html>

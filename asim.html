@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Media Showcase</title>
+    <style>
+        /* Modern Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1e1b4b;
+            border-left: 5px solid #4f46e5;
+            padding-left: 10px;
+        }
+
+        /* Image Grid Layout */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* Video Showcase Layout */
+        .video-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .video-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-details {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .video-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .video-details p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #4338ca;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            align-self: flex-start;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nature & Innovation</h1>
+        <p>A simple showcase exploring the elements of our world.</p>
+    </header>
+
+    <main>
+        <!-- Image Gallery Section -->
+        <section>
+            <h2>Featured Galleries</h2>
+            <div class="image-grid">
+                
+                <!-- Image 1 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&q=80" alt="Sunlight shining through forest trees">
+                    <div class="card-content">
+                        <h3>Deep Forests</h3>
+                        <p>Exploring the dense canopy and ancient ecosystems of northern woodlands.</p>
+                    </div>
+                </article>
+
+                <!-- Image 2 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&q=80" alt="Nebula in deep space">
+                    <div class="card-content">
+                        <h3>Deep Space</h3>
+                        <p>Studying nebulae, distant star clusters, and cosmic dust structures.</p>
+                    </div>
+                </article>
+
+                <!-- Image 3 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80" alt="Beautiful sandy beach sunset">
+                    <div class="card-content">
+                        <h3>Coastal Currents</h3>
+                        <p>How shoreline geology and tidal movements shape our global coastlines.</p>
+                    </div>
+                </article>
+
+                <!-- Image 4 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="Modern glass skyscraper architecture">
+                    <div class="card-content">
+                        <h3>Urban Design</h3>
+                        <p>How modern skyscrapers integrate sustainable design with structural engineering.</p>
+                    </div>
+                </article>
+
+                <!-- Image 5 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt="Glowing circuit board">
+                    <div class="card-content">
+                        <h3>Microtech</h3>
+                        <p>The development of silicon-based chips and the limits of modern computing.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section>
+            <h2>Featured Video Project</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <!-- Standard HTML5 Video element with controls -->
+                    <video controls poster="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-details">
+                    <span class="badge">Nature Documentary</span>
+                    <h3>The Wilderness Ecosystem</h3>
+                    <p>This video segment acts on the dynamics of open grassland habitats, observing wildlife interactions and seasonal changes in real-time.</p>
+                    <p><em>Use the player controls to play, pause, adjust volume, or enter full-screen mode.</em></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Media Showcase. Built with clean HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
